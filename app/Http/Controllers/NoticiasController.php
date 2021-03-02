@@ -67,7 +67,16 @@ class NoticiasController extends Controller
         $newNotice->imagen = $nombreimagen;
         $newNotice->save();
         $request->file('imagen')->storeAs('public/img', $nombreimagen);
-        return redirect()->route('noticia.index');
+        if($request->categoria == 1){
+            return redirect()->route('deportes');
+        }
+        if($request->categoria == 2){
+            return redirect()->route('actualidad');
+        }
+        if($request->categoria == 3){
+            return redirect()->route('ciencia');
+        }
+
     }
 
     /**
