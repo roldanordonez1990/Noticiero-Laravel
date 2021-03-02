@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Noticiero.iml" filepath="$PROJECT_DIR$/.idea/Noticiero.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ejercicio1/.idea/ejercicio1.iml" filepath="$PROJECT_DIR$/../ejercicio1/.idea/ejercicio1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../example-app/.idea/example-app.iml" filepath="$PROJECT_DIR$/../example-app/.idea/example-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mycash/.idea/mycash.iml" filepath="$PROJECT_DIR$/../mycash/.idea/mycash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../proyecto-Laravel/.idea/proyecto-Laravel.iml" filepath="$PROJECT_DIR$/../proyecto-Laravel/.idea/proyecto-Laravel.iml" />
+    </modules>
+  </component>
+</project>
