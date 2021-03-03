@@ -88,9 +88,10 @@ class NoticiasController extends Controller
     public function show($id)
     {
 
+        $usu = User::all();
         $notices = Noticia::findOrFail($id);
         $url = 'storage/img/';
-        return view('noticia.show')->with('notices', $notices)->with('url', $url);
+        return view('noticia.show')->with('notices', $notices)->with('url', $url)->with('usu', $usu);
     }
 
     /**

@@ -11,7 +11,11 @@
                         <img class="card-img-bottom" src="{{asset($url.$notices->imagen)}}" alt="Card image"
                              style="width:100%">
                         <h4 class="card-title">{{$notices->titulo}}</h4>
-                        <p>{{$notices->fecha}} | Por: {{$notices->user_id}}</p>
+                        @foreach($usu as $u)
+                            @if($notices->user_id == $u->id)
+                                <p>{{$notices->fecha}} | Por: {{$u->name}} {{$u->apellido}}</p>
+                            @endif
+                        @endforeach
                         <p class="card-text">{{$notices->descripcion}}</p>
                         {{--Con esta línea comprobamos si el usuario está logueado y si su rol es admin para mostrar el contenido--}}
                         @if(Auth::check() && Auth::user()->roles->contains(1))
