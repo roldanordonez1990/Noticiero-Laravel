@@ -152,14 +152,14 @@ class NoticiasController extends Controller
             'titulo.min' => 'El título debe ser superior a 10 caracteres',
             'descripcion.required' => 'DESCRIPCION OBLIGATORIA',
             'descripcion.max' => 'No puede sobrevapasar los 9999 caracteres',
-            'imagen.required' => 'IMAGEN OBLIGATORIA',
+
 
         ];
         $request->validate([
             'fecha' => 'required',
             'titulo' => 'required|min:10',
             'descripcion' => 'required|max:9999',
-            'imagen' => 'required|image',
+
         ], $messages);
 
         $newNotice = Noticia::findOrFail($id);

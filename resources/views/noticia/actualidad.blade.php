@@ -8,8 +8,8 @@
     @section('content')
         <table class="table">
             <thead class="bg-dark">
-            <tr class="text-white" >
-                <th class="text-center">#</th>
+            <tr class="text-white">
+
                 <th class="text-center">Título de la noticia</th>
                 <th></th>
             </tr>
@@ -17,12 +17,14 @@
             <tbody>
             @foreach($actualidades as $f)
                 <tr>
-                    <td class="text-center"><a href="{{url('noticia/'.$f->id)}}" class="" >{{$f->id}}</a></td>
-                    <td class="text-center"><a href="{{url('noticia/'.$f->id)}}" class="" >{{$f->titulo}}</a> </td>
+                    <td class="text-center"><a href="{{url('noticia/'.$f->id)}}" class="">{{$f->titulo}}</a></td>
                     <td><img src="../resources/imagenLogo/mundo.png" width="35px"></td>
 
                 </tr>
             @endforeach
+            @if($actualidades == "[]")
+                <td class="text-danger text-center">No existen noticias actualmente</td>
+            @endif
             </tbody>
         </table>
     @endsection

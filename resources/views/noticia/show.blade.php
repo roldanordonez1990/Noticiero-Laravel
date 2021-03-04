@@ -10,10 +10,10 @@
                     <div class="card-body">
                         <img class="card-img-bottom" src="{{asset($url.$notices->imagen)}}" alt="Card image"
                              style="width:100%">
-                        <h4 class="card-title">{{$notices->titulo}}</h4>
+                        <h4 class="card-title"><strong>{{$notices->titulo}}</strong></h4>
                         @foreach($usu as $u)
                             @if($notices->user_id == $u->id)
-                                <p>{{$notices->fecha}} | Por: {{$u->name}} {{$u->apellido}}</p>
+                                <p><strong>{{$notices->fecha}} | Por: {{$u->name}} {{$u->apellido}}</strong></p>
                             @endif
                         @endforeach
                         <p class="card-text">{{$notices->descripcion}}</p>

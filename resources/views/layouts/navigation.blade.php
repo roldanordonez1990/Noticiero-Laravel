@@ -28,13 +28,13 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('ciencia')" :active="request()->routeIs('ciencia')">
-                        {{ __('Ciencia') }}
+                        {{ __('Ciencia y Tecnología') }}
                     </x-nav-link>
                 </div>
                 {{--Con esta línea comprobamos si el usuario está logueado y si su rol es admin para mostrar el contenido--}}
                 @if(Auth::check() && Auth::user()->roles->contains(1))
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                        <x-nav-link :href="route('noticia.create')" :active="request()->routeIs('noticia.create')">
+                        <x-nav-link :href="route('create')" :active="request()->routeIs('create')">
                             {{ __('Añadir nueva noticia') }}
                         </x-nav-link>
                     </div>

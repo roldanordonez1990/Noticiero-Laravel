@@ -1,6 +1,6 @@
 
 <x-guest-layout >
-    <x-auth-card class="bg-yellow-100">
+    <x-auth-card class="bg-red-100">
         <x-slot name="logo">
             <a href="/">
                 <img src="storage/img/logo.png" style="width: 190px;">
@@ -38,9 +38,8 @@
                 <label for="remember_me" class="inline-flex items-center">
                     <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-
                 </label>
+
             </div>
 
             <div class="flex items-center justify-end mt-4">
@@ -49,6 +48,7 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
 
                 <x-button class="ml-3">
                     {{ __('Log in') }}
