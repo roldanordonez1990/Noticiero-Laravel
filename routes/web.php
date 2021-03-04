@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('noticia.index');
 });
 
 Route::get('/dashboard', function () {
@@ -26,12 +26,15 @@ Route::get('/dashboard', function () {
 
 Route::get('/roluser', [ProbarRoleController::class, 'index']);
 
-Route::resource('user', UserController::class)->middleware('auth');
-Route::resource('noticia', NoticiasController::class)->middleware('auth');
-Route::get("deportes",[NoticiasController::class, "deportes"])->name("deportes");
-Route::get("actualidad",[NoticiasController::class, "actualidad"])->name("actualidad");
-Route::get("ciencia",[NoticiasController::class, "ciencia"])->name("ciencia");
-Route::get("noticia/create",[NoticiasController::class, "create"])->name('create')->middleware('admincontrol');
-Route::get("gestion",[UserController::class, "gestion"])->name("gestion")->middleware('admincontrol');
+Route::middleware('auth', 'verified')->group(function(){
+    Route::resource('user', UserController::class);
+    Route::resource('noticia', NoticiasController::class);
+    Route::get("deportes",[NoticiasController::class, "deportes"])->name("deportes");
+    Route::get("actualidad",[NoticiasController::class, "actualidad"])->name("actualidad");
+    Route::get("ciencia",[NoticiasController::class, "ciencia"])->name("ciencia");
+    Route::get("noticia/create",[NoticiasController::class, "create"])->name('create')->middleware('admincontrol');
+    Route::get("gestion",[UserController::class, "gestion"])->name("gestion")->middleware('admincontrol');
+});
+
 
 require __DIR__.'/auth.php';

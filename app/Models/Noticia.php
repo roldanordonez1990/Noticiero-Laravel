@@ -27,6 +27,6 @@ class Noticia extends Model
 
     //Una noticia pertenece a un solo user. Por eso belongsTo
     public function usuariosNoticia(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

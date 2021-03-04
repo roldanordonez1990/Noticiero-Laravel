@@ -18,7 +18,7 @@ class Admincontrol
     public function handle(Request $request, Closure $next)
     {
 
-        if(Auth::check() && Auth::user()->roles->contains(2))
+        if(Auth::check() && Auth::user()->roles->contains(2) || !Auth::check())
             return redirect()->route("noticia.index");
         else
         return $next($request);
