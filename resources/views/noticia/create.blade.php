@@ -11,21 +11,21 @@
             <div class="form-group">
                 <label for="fecha">Fecha</label>
                 @error('fecha')
-                <spam class="text-danger">{{$message}}</spam>
+                <span class="text-danger">{{$message}}</span>
                 @enderror
                 <input type="date" class="form-control" name="fecha" placeholder="Fecha">
             </div>
             <div class="form-group">
                 <label for="titulo">Título</label>
                 @error('titulo')
-                <spam class="text-danger">{{$message}}</spam>
+                <span class="text-danger">{{$message}}</span>
                 @enderror
                 <input type="text" class="form-control" name="titulo" placeholder="Título de la noticia">
             </div>
             <div class="form-group">
                 <label for="categoria">Categoria</label>
                 @error('categoria')
-                <spam class="text-danger">{{$message}}</spam>
+                <span class="text-danger">{{$message}}</span>
                 @enderror
                 <select name="categoria" class="form-control">
                     <option value="1">Deportes</option>
@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label for="descripcion">Noticia</label>
                 @error('descripcion')
-                <spam class="text-danger">{{$message}}</spam>
+                <span class="text-danger">{{$message}}</span>
                 @enderror
                 <textarea type="text" class="form-control" name="descripcion" placeholder="Escribe tu noticia"></textarea>
             </div>

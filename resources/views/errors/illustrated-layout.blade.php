@@ -462,7 +462,6 @@
                 <div class="max-w-sm m-8">
                     <div class="text-black text-5xl md:text-15xl font-black">
                         <img src="{{asset('storage/img/404.jpg')}}" style="width: 490px;">
-
                     </div>
 
                     <div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
